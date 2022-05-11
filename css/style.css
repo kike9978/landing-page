@@ -20,7 +20,7 @@ body{
 
 }
 .fixed-height{
-    height: 300px;
+    min-height: 500px;
     flex-shrink: 0;
 }
 
@@ -72,8 +72,15 @@ a:active{
     
 }
 
-.left-box, .cover{
+.left-box, .cover-photo{
     flex: 1;
+}
+
+.left-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
 
 
@@ -88,6 +95,10 @@ h1{
     font-size: 18px;
     color: #E5E7EB;
 }
+button{
+    padding: 10px 25px;
+    cursor: pointer;
+}
 .hero button, .call{
     background-color: #3882F6;
 }
@@ -101,36 +112,68 @@ button, .call{
     border-radius: 7px;
 }
 
-button{
-    padding: 10px 25px;
+
+.cover-photo{
+    width: 100%;
+}
+
+img{
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
 }
 
 .section-two{
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
+    gap: 30px;
 }
 
 h2{
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
+    padding-top: 50px;
 }
 
 .cards{
     display: flex;
-}
 
+}
+.info-cards{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+.icons{
+    height: 150px;
+    width: 150px;
+    border: solid;
+    border-color: #3882F6;
+    border-radius: 10px;
+}
 
 .section-three{
     background-color: #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+    padding: 0 400px;
 }
 .quote{
     font-size: 36px;
+    font-weight: 300;
     font-style: italic;
     color: #1F2937;
+    padding: 0;
     
 }
 .quoter{
@@ -139,10 +182,11 @@ h2{
 }
 
 .call{
-    
+    margin: 100px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 50px;
 }
 
 h3{
